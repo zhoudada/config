@@ -50,11 +50,13 @@ syntax enable
 set background=dark
 if has('win64')||has('win32')
     if has('gui_running')
-        set guifont=Consolas:h11
+        set guifont=Consolas:h10
         set guifontwide=SimHei
         "let g:solarized_termcolors=16
         set lines=999 columns=999
         colorscheme base16-eighties
+    else
+        colorscheme default
     endif
 else
     if has("unix")
@@ -84,7 +86,7 @@ set expandtab
 set backspace=indent,eol,start
 set encoding=utf-8
 set colorcolumn=80
-set cursorline
+"set cursorline
 set cursorcolumn
 set incsearch
 set hlsearch
