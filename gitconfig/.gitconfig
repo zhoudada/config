@@ -1,0 +1,8 @@
+[http]
+	postBuffer = 524288000
+[core]
+	autocrlf = true
+	editor = C:/Users/zhoud/unixhome/vim-7.4.417-python-2.7-python-3.4-ruby-2.0.0-lua-5.2-perl-5.18-windows-x64/vim
+[user]
+	name = zhoudada
+	email = zhoudada123@hotmail.com
