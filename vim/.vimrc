@@ -17,28 +17,28 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'altercation/vim-colors-solarized'
+" Bundle 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Bundle 'YankRing.vim'
-Plugin 'fugitive.vim'
-Bundle 'ervandew/supertab'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'kshenoy/vim-signature'
-Plugin 'majutsushi/tagbar'
-Plugin 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'YankRing.vim'
+" Plugin 'fugitive.vim'
+" Bundle 'ervandew/supertab'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
+" Plugin 'kshenoy/vim-signature'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'Lokaltog/vim-easymotion'
+" Bundle 'scrooloose/syntastic'
+" Bundle 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
-Bundle 'vim-scripts/matchit.zip'
+" Bundle 'vim-scripts/matchit.zip'
 Plugin 'terryma/vim-expand-region'
 Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'tpope/vim-dispatch'
-Plugin 'iamcco/markdown-preview.vim'
-Bundle 'kannokanno/previm'
-Bundle 'tyru/open-browser.vim'
-Plugin 'mrtazz/DoxygenToolkit.vim'
+" Plugin 'tpope/vim-dispatch'
+" Plugin 'iamcco/markdown-preview.vim'
+" Bundle 'kannokanno/previm'
+" Bundle 'tyru/open-browser.vim'
+" Plugin 'mrtazz/DoxygenToolkit.vim'
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()            " required
@@ -68,7 +68,7 @@ else
             set guifont=Monospace\ 12
         endif
     endif
-    colorscheme solarized
+    colorscheme gruvbox
     set t_Co=256
 endif
 
@@ -111,17 +111,6 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 """""Airline""""
 let g:airline_theme = "base16"
-
-""""""YCM""""
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_semantic_triggers = {}
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<C-j>"
