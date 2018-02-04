@@ -195,19 +195,21 @@
 # Custom functions
 function cdbase {
     program_path=`which $1`
-    base_dir=`dirname $program_path`
-    cd $base_dir
+    base_dir=`dirname "$program_path"`
+    cd "$base_dir"
 }
 
 alias ls='ls -hF --color=tty'                 # classify files in colour
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias ll='ls -l'                              # long list
-alias vim='gvim'
+# alias vim='gvim'
 alias grep='grep --color'
 alias e.='explorer .'
 alias winpty=''
 alias make='mingw32-make.exe'
+
+export TERM=xterm-256color
 if [[ -n $ConEmuPID ]]; then
     PROMPT_COMMAND='ConEmuC -StoreCWD'
 fi
